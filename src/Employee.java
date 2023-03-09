@@ -5,7 +5,7 @@ public class Employee {
     public static int counter = 0;
     private int id;
 
-    public Employee(String name, int department, int salary) {
+    public Employee(String name, int department, double salary) {
         this.name = name;
         this.department = department;
         this.salary = salary;
@@ -35,5 +35,13 @@ public class Employee {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Сотрудник: " + name +
+                ", отдел:" + department +
+                ", зарплата:" + salary +
+                ", id:" + id;
     }
 }

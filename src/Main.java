@@ -21,7 +21,7 @@ public class Main {
 
         for (Employee employee : employees) {
             if (employee != null) {
-                System.out.println(employee.toString()); //применил метод toString
+                System.out.println(employee);
             }
         }
         System.out.println("Сумма зарплат в месяц: " + sumSalary(employees) + "рублей");
@@ -31,7 +31,7 @@ public class Main {
         System.out.println();
         for (Employee employee : employees) {
             if (employee != null) {
-                System.out.println(employee.toString());
+                System.out.println(employee);
             }
         }
 
@@ -78,7 +78,7 @@ public class Main {
     public static void getEmployeesLessSalary(Employee[] employees, int salaryLevel) {
         for (Employee employee : employees) {
             if (employee != null && employee.getSalary() < salaryLevel) {
-                System.out.println("Сотрудник c зарплатой менее " + salaryLevel + " рублей: " + employee.toString());
+                System.out.println("Сотрудник c зарплатой менее " + salaryLevel + " рублей: " + employee);
             }
         }
     }
@@ -86,7 +86,7 @@ public class Main {
     public static void getEmployeesMoreSalary(Employee[] employees, int salaryLevel) {
         for (Employee employee : employees) {
             if (employee != null && employee.getSalary() > salaryLevel) {
-                System.out.println("Сотрудник c зарплатой более " + salaryLevel + " рублей: " + employee.toString());
+                System.out.println("Сотрудник c зарплатой более " + salaryLevel + " рублей: " + employee);
             }
         }
     }
@@ -136,7 +136,7 @@ public class Main {
     public static void getEmployeesDepart(Employee[] employees, int department) {
         for (Employee employee : employees) {
             if (employee != null && employee.getDepartment() == department) {
-                System.out.println("Сотрудник отдела " + department + ": " + employee.toString());
+                System.out.println("Сотрудник отдела " + department + ": " + employee);
             }
         }
     }

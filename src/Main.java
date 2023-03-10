@@ -31,7 +31,7 @@ public class Main {
         System.out.println();
         for (Employee employee : employees) {
             if (employee != null) {
-                System.out.println(employee.getName());
+                System.out.println(employee.toString());
             }
         }
 
@@ -46,7 +46,8 @@ public class Main {
         boolean checkDepartment = false;
         for (Employee employee : employees) {
             if (employee != null) {
-                if (checkDepartment = employee.getDepartment() == department) {
+                if (employee.getDepartment() == department) {
+                    checkDepartment = true;
                     System.out.println("Сотрудник с минимальной зарплатой в отделе " + department + ": "
                             + getEmployeeMinSalaryDepart(employees, department));
                     System.out.println("Сотрудник с максимальной зарплатой в отделе " + department + ": "
@@ -62,7 +63,7 @@ public class Main {
                 }
             }
         }
-        if (checkDepartment == false) {
+        if (!checkDepartment) {
             System.out.println("Отдел не найден");
         }
         sc.close();
@@ -77,8 +78,7 @@ public class Main {
     public static void getEmployeesLessSalary(Employee[] employees, int salaryLevel) {
         for (Employee employee : employees) {
             if (employee != null && employee.getSalary() < salaryLevel) {
-                System.out.println("Сотрудник c зарплатой менее " + salaryLevel + " рублей: " + employee.getId()
-                        + " " + employee.getName() + " " + employee.getSalary());
+                System.out.println("Сотрудник c зарплатой менее " + salaryLevel + " рублей: " + employee.toString());
             }
         }
     }
@@ -86,8 +86,7 @@ public class Main {
     public static void getEmployeesMoreSalary(Employee[] employees, int salaryLevel) {
         for (Employee employee : employees) {
             if (employee != null && employee.getSalary() > salaryLevel) {
-                System.out.println("Сотрудник c зарплатой более " + salaryLevel + " рублей: " + employee.getId()
-                        + " " + employee.getName() + " " + employee.getSalary());
+                System.out.println("Сотрудник c зарплатой более " + salaryLevel + " рублей: " + employee.toString());
             }
         }
     }
@@ -137,8 +136,7 @@ public class Main {
     public static void getEmployeesDepart(Employee[] employees, int department) {
         for (Employee employee : employees) {
             if (employee != null && employee.getDepartment() == department) {
-                System.out.println("Сотрудник отдела " + department + ": " + employee.getId()
-                        + " " + employee.getName() + " " + employee.getSalary());
+                System.out.println("Сотрудник отдела " + department + ": " + employee.toString());
             }
         }
     }

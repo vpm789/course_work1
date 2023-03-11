@@ -44,4 +44,10 @@ public class Employee {
                 ", зарплата:" + salary +
                 ", id:" + id;
     }
+
+    public String getNameAndSalary() {
+        return "Сотрудник: " + name +
+                ", зарплата:" + salary +
+                ", id:" + id;
+    }
 }

@@ -31,7 +31,7 @@ public class Main {
         System.out.println();
         for (Employee employee : employees) {
             if (employee != null) {
-                System.out.println(employee);
+                System.out.println(employee.getName());
             }
         }
 
@@ -136,7 +136,7 @@ public class Main {
     public static void getEmployeesDepart(Employee[] employees, int department) {
         for (Employee employee : employees) {
             if (employee != null && employee.getDepartment() == department) {
-                System.out.println("Сотрудник отдела " + department + ": " + employee);
+                System.out.println("Сотрудник отдела " + department + ": " + employee.getNameAndSalary());
             }
         }
     }
